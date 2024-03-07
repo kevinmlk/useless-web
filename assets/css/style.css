@@ -1,5 +1,9 @@
 :root {
-
+  --dark-gray: #444256;
+  --dark-blue: #2333A4;
+  --blue: #3B47BE;
+  --light-violet: #C0B4F4;
+  --light-blue: #899ED2;
 }
 
 body {
