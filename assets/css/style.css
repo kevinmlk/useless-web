@@ -10,10 +10,15 @@
 
 body {
   font-family: "Press Start 2P", system-ui;
-  background: linear-gradient(360deg, rgba(35,51,164,1) 0%, rgba(59,71,190,1) 35%, rgba(137,158,210,1) 100%);
+  /* background: linear-gradient(360deg, rgba(35,51,164,1) 0%, rgba(59,71,190,1) 35%, rgba(137,158,210,1) 100%); */
   color: var(--white);
 }
 
+main {
+  width: 100%;
+}
+
+/* Id's & classes */
 .icon {
   height: 32px;
 }
