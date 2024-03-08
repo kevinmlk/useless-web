@@ -19,7 +19,7 @@ main {
   height: 100vh;
 }
 
-button {
+.btn-theme {
   font-size: 1.1em;
   color: var(--black);
   text-transform: uppercase;
@@ -32,7 +32,7 @@ button {
   margin: 35px 0;
 }
 
-button:active {
+.btn-theme:active {
   box-shadow: none;
   transform: translate(3px, 3px);
 }

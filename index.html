@@ -22,7 +22,7 @@
     <!-- Intro section -->
     <section id="intro-section" class="text-center d-flex flex-column">
       <h1>Guess the number</h1>
-      <p>(difficulty: impossible)</p>
+      <p>(impossible)</p>
       <div>
         <img src="./assets/icons/heart.svg" title="Heart" class="icon"></img>
         <img src="./assets/icons/heart.svg" title="Heart" class="icon"></img>
@@ -33,21 +33,26 @@
         <img src="./assets/icons/heart.svg" title="Heart" class="icon"></img>
         <img src="./assets/icons/heart.svg" title="Heart" class="icon"></img>
       </div>
-      <button id="start-button">Start Game</button>
+      <button id="start-button" class="btn-theme">Start Game</button>
     </section>
 
     <!-- Quiz section -->
-    <section id="quiz-section">
+    <section id="quiz-section" class="hidden">
       <article>
         <!-- Choose difficulty -->
         <div id="difficulty-container" class="d-flex flex-column justify-content-center">
           <h2>Choose your difficulty</h2>
-          <button id="difficulty-button">Hard (1-100)</button>
+          <button id="difficulty-button" class="btn-theme">Hard (1-100)</button>
         </div>
 
         <!-- Number game container -->
-        <div>
-          
+        <div id="number-game-container" class="hidden">
+          <h2>Guess the number</h2>
+          <p>Between 1 and 100</p>
+          <div>
+            <input type="number" placeholder="1">
+            <input type="submit" value="Guess" class="btn-theme">
+          </div>
         </div>
       </article>
     </section>
