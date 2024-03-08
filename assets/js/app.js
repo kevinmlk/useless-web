@@ -10,10 +10,12 @@ const setup = () => {
   // Btn's
   const startBtn = document.querySelector('#start-button');
   const difficultyBtn = document.querySelector('#difficulty-button');
+  const submitBtn = document.querySelector('#submit-button');
 
   // Event listeners
   startBtn.addEventListener('click', hideIntro);
   difficultyBtn.addEventListener('click', hideDifficulty);
+  submitBtn.addEventListener('click', checkNumber());
 }
 
 // Hide intro section
@@ -41,7 +43,9 @@ const generateNumber = (min, max) => {
   return rndNumber;
 }
 
-
+const checkNumber = () => {
+  console.log(generatedNumber);
+}
 
 // Load setup when DOM content is loaded
 window.addEventListener("DOMContentLoaded", setup);
