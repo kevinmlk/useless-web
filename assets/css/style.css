@@ -19,11 +19,6 @@ main {
   height: 100vh;
 }
 
-/* Id's & classes */
-.icon {
-  height: 32px;
-}
-
 button {
   font-size: 1.1em;
   color: var(--black);
@@ -41,6 +36,16 @@ button:active {
   box-shadow: none;
   transform: translate(3px, 3px);
 }
+
+/* Id's & classes */
+.icon {
+  height: 32px;
+}
+
+.hidden {
+  display: none !important;
+}
+
 
 /* Particles CSS */
 #particles-js{
