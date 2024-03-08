@@ -36,6 +36,12 @@ const hideDifficulty = () => {
 }
 
 // Generate a random number between 1 - 100
+const generateNumber = (min, max) => {
+  let rndNumber = Math.floor(Math.random() * (max - min) + min);
+  return rndNumber;
+}
+
+
 
 // Load setup when DOM content is loaded
 window.addEventListener("DOMContentLoaded", setup);
