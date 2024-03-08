@@ -4,8 +4,34 @@
   --blue: #3B47BE;
   --light-violet: #C0B4F4;
   --light-blue: #899ED2;
+  --white: #FFF;
+  --black: #0a0a0a;
 }
 
 body {
   font-family: "Press Start 2P", system-ui;
+  background: linear-gradient(360deg, rgba(35,51,164,1) 0%, rgba(59,71,190,1) 35%, rgba(137,158,210,1) 100%);
+  color: var(--white);
+}
+
+.icon {
+  height: 32px;
+}
+
+button {
+  font-size: 1.5rem;
+  color: var(--dark-gray);
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 4px solid var(--black);
+  background: var(--white);
+  box-shadow: 3px 3px var(--black);
+  cursor: pointer;
+  margin: 35px 0;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
 }
