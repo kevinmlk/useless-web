@@ -1,4 +1,6 @@
 'use strict';
+// Number to be guessed
+let number;
 
 // Setup
 const setup = () => {
@@ -15,7 +17,7 @@ const setup = () => {
   // Event listeners
   startBtn.addEventListener('click', hideIntro);
   difficultyBtn.addEventListener('click', hideDifficulty);
-  submitBtn.addEventListener('click', checkNumber());
+  submitBtn.addEventListener('click', checkNumber);
 }
 
 // Hide intro section
@@ -35,6 +37,9 @@ const hideDifficulty = () => {
 
   difficultySection.classList.add('hidden');
   gameContainer.classList.remove('hidden');
+
+  // Store the generated number the variable
+  number = generateNumber(1, 100);
 }
 
 // Generate a random number between 1 - 100
@@ -44,7 +49,8 @@ const generateNumber = (min, max) => {
 }
 
 const checkNumber = () => {
-  console.log(generatedNumber);
+  const userInput = document.querySelector('#input-number').value;
+  console.log('User input: ' + userInput + ', generated number: ' + number);
 }
 
 // Load setup when DOM content is loaded
