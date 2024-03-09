@@ -56,16 +56,27 @@ const checkNumber = () => {
   const messageContainer = document.querySelector('#defeat-message-container');
   const userInputMessage = document.querySelector('#user-input-message');
   const generatedNumberMessage = document.querySelector('#generated-number-message');
+  const gameContainer = document.querySelector('#number-game-container');
 
   // Check if the user input matches the guessed number
   if (userInput !== number) {
+    // Show defeat message
     userInputMessage.textContent = 'Your number was: ' + userInput;
     generatedNumberMessage.textContent = 'The correct answer was: ' + number;
 
-    // Show defeat message
-    const gameContainer = document.querySelector('#number-game-container');
     gameContainer.classList.add('hidden');
     messageContainer.classList.remove('hidden');
+  } else {
+    // Show defeat message
+    userInputMessage.textContent = 'Your number was: ' + userInput;
+    generatedNumberMessage.textContent = 'The correct answer was: ' + number + 1;
+
+    gameContainer.classList.add('hidden');
+    messageContainer.classList.remove('hidden');
+
+    // Footer message
+    const footerMessage = document.querySelector('#footer-message');
+    footerMessage.textContent = "Actually, u guessed the right number. but we don't like to see u win, so we added one.";
   }
 }
 

@@ -57,13 +57,18 @@
 
         <!-- Defeat message container -->
         <div id="defeat-message-container" class="hidden text-center">
-          <h2>Too bad!<br>You lost</h2>
+          <h2 class="mb-5">Too bad, you lost!</h2>
           <p id="user-input-message">Your number was:</p>
           <p id="generated-number-message">The correct answer was:</p>
+          <img id="skull-icon" class="mt-4" src="./assets/icons/skull.svg" alt="Skull">
         </div>
       </article>
     </section>
   </main>
+  <!-- Footer -->
+  <footer class="hidden">
+    <p id="footer-message"></p>
+  </footer>
   <!-- Link JavaScript files -->
   <script src="./assets/js/particles.min.js"></script>
   <script src="./assets/js/app.js"></script>

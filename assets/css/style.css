@@ -58,6 +58,10 @@ main {
   display: none !important;
 }
 
+#skull-icon {
+  height: 48px;
+}
+
 /* Particles CSS */
 #particles-js{
   width: 100%;
