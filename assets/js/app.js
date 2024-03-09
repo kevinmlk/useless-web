@@ -51,6 +51,22 @@ const generateNumber = (min, max) => {
 const checkNumber = () => {
   const userInput = document.querySelector('#input-number').value;
   console.log('User input: ' + userInput + ', generated number: ' + number);
+
+  // Store DOM elements
+  const messageContainer = document.querySelector('#defeat-message-container');
+  const userInputMessage = document.querySelector('#user-input-message');
+  const generatedNumberMessage = document.querySelector('#generated-number-message');
+
+  // Check if the user input matches the guessed number
+  if (userInput !== number) {
+    userInputMessage.textContent = 'Your number was: ' + userInput;
+    generatedNumberMessage.textContent = 'The correct answer was: ' + number;
+
+    // Show defeat message
+    const gameContainer = document.querySelector('#number-game-container');
+    gameContainer.classList.add('hidden');
+    messageContainer.classList.remove('hidden');
+  }
 }
 
 // Load setup when DOM content is loaded

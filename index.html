@@ -46,13 +46,20 @@
         </div>
 
         <!-- Number game container -->
-        <div id="number-game-container" class="hidden">
+        <div id="number-game-container" class="hidden text-center">
           <h2>Guess the number</h2>
           <p>Between 1 and 100</p>
           <div>
             <input id="input-number" type="number" placeholder="1">
             <input id="submit-button" type="submit" value="Guess" class="btn-theme">
           </div>
+        </div>
+
+        <!-- Defeat message container -->
+        <div id="defeat-message-container" class="hidden text-center">
+          <h2>Too bad!<br>You lost</h2>
+          <p id="user-input-message">Your number was:</p>
+          <p id="generated-number-message">The correct answer was:</p>
         </div>
       </article>
     </section>
