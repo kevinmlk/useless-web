@@ -49,9 +49,13 @@
         <div id="number-game-container" class="hidden text-center">
           <h2>Guess the number</h2>
           <p>Between 1 and 100</p>
-          <div>
-            <input id="input-number" type="number" placeholder="1">
-            <input id="submit-button" type="submit" value="Guess" class="btn-theme">
+          <div class="d-flex flex-column gap-1">
+            <div>
+              <input id="input-number" type="number" placeholder="1">
+              <input id="hint-button" type="submit" value="Hint" class="btn-theme">
+            </div>
+            <p id="hint-message"></p>
+            <input id="submit-button" type="submit" value="Guess number" class="btn-theme">
           </div>
         </div>
 
