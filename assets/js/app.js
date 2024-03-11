@@ -47,6 +47,7 @@ const hideDifficulty = () => {
 // Generate a random number between 1 - 100
 const generateNumber = (min, max) => {
   let rndNumber = Math.floor(Math.random() * (max - min) + min);
+  console.log(rndNumber);
   return rndNumber;
 }
 
@@ -78,24 +79,25 @@ const checkNumber = () => {
   const gameContainer = document.querySelector('#number-game-container');
 
   // Check if the user input matches the guessed number
-  if (userInput !== number) {
+  if (userInput == number) {
+    number++; 
     // Show defeat message
     userInputMessage.textContent = 'Your number was: ' + userInput;
     generatedNumberMessage.textContent = 'The correct answer was: ' + number;
 
     gameContainer.classList.add('hidden');
     messageContainer.classList.remove('hidden');
+
+    // Footer message
+    const successMessage = document.querySelector('#success-message');
+    successMessage.textContent = "Actually, u guessed the right number. But we don't like to see u win, so we changed it.";
   } else {
     // Show defeat message
     userInputMessage.textContent = 'Your number was: ' + userInput;
-    generatedNumberMessage.textContent = 'The correct answer was: ' + number + 1;
+    generatedNumberMessage.textContent = 'The correct answer was: ' + number;
 
     gameContainer.classList.add('hidden');
     messageContainer.classList.remove('hidden');
-
-    // Footer message
-    const footerMessage = document.querySelector('#footer-message');
-    footerMessage.textContent = "Actually, u guessed the right number. but we don't like to see u win, so we added one.";
   }
 }
 

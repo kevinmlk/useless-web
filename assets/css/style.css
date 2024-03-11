@@ -58,6 +58,11 @@ main {
   transform: none;
 }
 
+#success-message {
+  font-size: .6em;
+  opacity: .6;
+}
+
 /* Id's & classes */
 .icon {
   height: 32px;
