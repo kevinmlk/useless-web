@@ -1,0 +1,111 @@
+:root {
+  --dark-gray: #444256;
+  --dark-blue: #2333A4;
+  --blue: #3B47BE;
+  --light-violet: #C0B4F4;
+  --light-blue: #899ED2;
+  --white: #FFF;
+  --black: #0a0a0a;
+}
+
+body {
+  font-family: "Press Start 2P", system-ui;
+  /* background: linear-gradient(360deg, rgba(35,51,164,1) 0%, rgba(59,71,190,1) 35%, rgba(137,158,210,1) 100%); */
+  color: var(--white);
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Id's & classes */
+#number-game-container {
+  margin-top: 228px;
+}
+
+#defeat-message-container {
+  margin-top: 96px;
+}
+
+#input-number {
+  font-size: 1.1em;
+  color: var(--black);
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 4px solid var(--black);
+  background: var(--white);
+  box-shadow: 3px 3px var(--black);
+  margin: 35px 0;
+}
+
+#hint-button:disabled {
+  opacity: .6;
+}
+
+#hint-button:disabled:active {
+  box-shadow: 3px 3px var(--black);
+  transform: none;
+}
+
+#success-message {
+  font-size: .6em;
+  opacity: .6;
+}
+
+#skull-icon {
+  height: 48px;
+}
+
+.icon {
+  height: 32px;
+}
+
+.icon-sm {
+  height: 16px;
+}
+
+.btn-theme {
+  font-size: 1.1em;
+  color: var(--black);
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 4px solid var(--black);
+  background: var(--white);
+  box-shadow: 3px 3px var(--black);
+  cursor: pointer;
+  margin: 35px 0;
+}
+
+.btn-theme:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Particles CSS */
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-blue);
+  background-image: url('http://vincentgarreau.com/particles.js/assets/img/kbLd9vb_new.gif');
+  background-size: 60%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  p {
+    font-size: .8em;
+  }
+  .btn-theme, #input-number {
+    font-size: .8em;
+  }
+}

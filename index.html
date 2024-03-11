@@ -3,9 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link Bootstrap & CSS files -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./assets/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <!-- Google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <!-- Browser title -->
   <title>Guess the number</title>
 </head>
 <body>
-  
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+  <!-- Main content -->
+  <main class="container d-flex flex-column justify-content-center align-items-center position-relative">
+    <!-- Intro section -->
+    <section id="intro-section" class="text-center d-flex flex-column">
+      <h1>Guess the number</h1>
+      <p>(impossible)</p>
+      <div>
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon">
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon">
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon">
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon">
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon">
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon">
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon">
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon">
+      </div>
+      <button id="start-button" class="btn-theme">Start Game</button>
+    </section>
+
+    <!-- Quiz section -->
+    <section id="quiz-section" class="hidden">
+      <article>
+        <!-- Choose difficulty -->
+        <div id="difficulty-container" class="d-flex flex-column justify-content-center">
+          <h2>Choose your difficulty</h2>
+          <button id="difficulty-button" class="btn-theme">Hard (1-100)</button>
+        </div>
+
+        <!-- Number game container -->
+        <div id="number-game-container" class="hidden text-center">
+          <h2>Guess the number</h2>
+          <p>Between 1 and 100</p>
+          <div class="d-flex gap-2 justify-content-center">
+            <p>Lives:</p>
+            <img src="./assets/icons/path76.svg" alt="Heart" class="icon-sm">
+          </div>
+          <div class="d-flex flex-column gap-1">
+            <div>
+              <input id="input-number" type="number" placeholder="1">
+              <input id="hint-button" type="submit" value="Hint" class="btn-theme">
+            </div>
+            <div class="d-flex gap-4 align-items-center">
+              <img id="lightbulb-icon" src="./assets/icons/lightbulb-yellow.svg" alt="Lightbulb" class="icon hidden">
+              <p id="hint-message" class="mb-0"></p>
+            </div>
+            <input id="submit-button" type="submit" value="Guess number" class="btn-theme">
+          </div>
+        </div>
+
+        <!-- Defeat message container -->
+        <div id="defeat-message-container" class="hidden text-center">
+          <h2 class="mb-5">Too bad, you lost!</h2>
+          <p id="user-input-message">Your number was:</p>
+          <p id="generated-number-message">The correct answer was:</p>
+          <img id="skull-icon" class="mt-4" src="./assets/icons/g77.svg" alt="Skull">
+        </div>
+      </article>
+      <p id="success-message" class="mt-5 pt-5"></p>
+    </section>
+  </main>
+  <!-- Link JavaScript files -->
+  <script src="./assets/js/particles.min.js"></script>
+  <script src="./assets/js/app.js"></script>
 </body>
 </html>
