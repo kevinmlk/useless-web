@@ -24,14 +24,14 @@
       <h1>Guess the number</h1>
       <p>(impossible)</p>
       <div>
-        <img src="./assets/icons/heart.svg" title="Heart" class="icon" />
-        <img src="./assets/icons/heart.svg" title="Heart" class="icon" />
-        <img src="./assets/icons/heart.svg" title="Heart" class="icon" />
-        <img src="./assets/icons/heart.svg" title="Heart" class="icon" />
-        <img src="./assets/icons/heart.svg" title="Heart" class="icon" />
-        <img src="./assets/icons/heart.svg" title="Heart" class="icon" />
-        <img src="./assets/icons/heart.svg" title="Heart" class="icon" />
-        <img src="./assets/icons/heart.svg" title="Heart" class="icon" />
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon" />
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon" />
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon" />
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon" />
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon" />
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon" />
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon" />
+        <img src="./assets/icons/path76.svg" title="Heart" class="icon" />
       </div>
       <button id="start-button" class="btn-theme">Start Game</button>
     </section>
@@ -49,12 +49,19 @@
         <div id="number-game-container" class="hidden text-center">
           <h2>Guess the number</h2>
           <p>Between 1 and 100</p>
+          <div class="d-flex gap-2 justify-content-center">
+            <p>Lives:</p>
+            <img src="./assets/icons/path76.svg" alt="Heart" class="icon-sm">
+          </div>
           <div class="d-flex flex-column gap-1">
             <div>
               <input id="input-number" type="number" placeholder="1">
               <input id="hint-button" type="submit" value="Hint" class="btn-theme">
             </div>
-            <p id="hint-message"></p>
+            <div class="d-flex gap-4 align-items-center">
+              <img id="lightbulb-icon" src="./assets/icons/lightbulb-yellow.svg" alt="Lightbulb" class="icon hidden">
+              <p id="hint-message" class="mb-0"></p>
+            </div>
             <input id="submit-button" type="submit" value="Guess number" class="btn-theme">
           </div>
         </div>
@@ -64,7 +71,7 @@
           <h2 class="mb-5">Too bad, you lost!</h2>
           <p id="user-input-message">Your number was:</p>
           <p id="generated-number-message">The correct answer was:</p>
-          <img id="skull-icon" class="mt-4" src="./assets/icons/skull.svg" alt="Skull">
+          <img id="skull-icon" class="mt-4" src="./assets/icons/g77.svg" alt="Skull">
         </div>
       </article>
       <p id="success-message" class="mt-5 pt-5"></p>

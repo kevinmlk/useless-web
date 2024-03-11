@@ -37,6 +37,14 @@ main {
   transform: translate(3px, 3px);
 }
 
+#number-game-container {
+  margin-top: 228px;
+}
+
+#defeat-message-container {
+  margin-top: 96px;
+}
+
 #input-number {
   font-size: 1.1em;
   color: var(--black);
@@ -66,6 +74,10 @@ main {
 /* Id's & classes */
 .icon {
   height: 32px;
+}
+
+.icon-sm {
+  height: 16px;
 }
 
 .hidden {

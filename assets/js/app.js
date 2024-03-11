@@ -55,14 +55,17 @@ const generateNumber = (min, max) => {
 const hintMessage = () => {
   // Hint message container
   const hintMessageContainer = document.querySelector('#hint-message');
+  const lightbulb = document.querySelector('#lightbulb-icon');
 
   // Random number
   let rndHint = Math.floor(Math.random() * (3 - 1) + 1);
   
   if (rndHint === 1) {
+    lightbulb.classList.remove('hidden');
     hintMessageContainer.textContent = 'The number is greater than 1';
     hintBtn.disabled = true;
   } else {
+    lightbulb.classList.remove('hidden');
     hintMessageContainer.textContent = 'The number is less then 100';
     hintBtn.disabled = true;
   }
@@ -90,7 +93,7 @@ const checkNumber = () => {
 
     // Footer message
     const successMessage = document.querySelector('#success-message');
-    successMessage.textContent = "Actually, u guessed the right number. But we don't like to see u win, so we changed it.";
+    successMessage.textContent = "Actually, u guessed the right number. But we don't like to see you win, so we changed it.";
   } else {
     // Show defeat message
     userInputMessage.textContent = 'Your number was: ' + userInput;
