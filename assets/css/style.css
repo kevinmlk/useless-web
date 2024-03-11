@@ -49,6 +49,15 @@ main {
   margin: 35px 0;
 }
 
+#hint-button:disabled {
+  opacity: .6;
+}
+
+#hint-button:disabled:active {
+  box-shadow: 3px 3px var(--black);
+  transform: none;
+}
+
 /* Id's & classes */
 .icon {
   height: 32px;

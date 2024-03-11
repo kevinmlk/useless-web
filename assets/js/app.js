@@ -1,6 +1,7 @@
 'use strict';
 // Number to be guessed
 let number;
+const hintBtn = document.querySelector('#hint-button');
 
 // Setup
 const setup = () => {
@@ -18,6 +19,7 @@ const setup = () => {
   startBtn.addEventListener('click', hideIntro);
   difficultyBtn.addEventListener('click', hideDifficulty);
   submitBtn.addEventListener('click', checkNumber);
+  hintBtn.addEventListener('click', hintMessage);
 }
 
 // Hide intro section
@@ -46,6 +48,23 @@ const hideDifficulty = () => {
 const generateNumber = (min, max) => {
   let rndNumber = Math.floor(Math.random() * (max - min) + min);
   return rndNumber;
+}
+
+// generate a random hint message
+const hintMessage = () => {
+  // Hint message container
+  const hintMessageContainer = document.querySelector('#hint-message');
+
+  // Random number
+  let rndHint = Math.floor(Math.random() * (3 - 1) + 1);
+  
+  if (rndHint === 1) {
+    hintMessageContainer.textContent = 'The number is greater than 1';
+    hintBtn.disabled = true;
+  } else {
+    hintMessageContainer.textContent = 'The number is less then 100';
+    hintBtn.disabled = true;
+  }
 }
 
 const checkNumber = () => {
